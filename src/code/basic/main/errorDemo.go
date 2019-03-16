@@ -12,7 +12,7 @@ func createError(num int) (int, error) {
 	return num, nil
 }
 
-func main() {
+func test() {
 	result, err := createError(-1)
 	if err != nil {
 		fmt.Println(result)

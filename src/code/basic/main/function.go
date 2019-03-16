@@ -22,7 +22,7 @@ func fibonacci(n int) int {
 	return fibonacci(n-2) + fibonacci(n-1)
 }
 
-func main() {
+func testFunction() {
 	var person person
 	person.name = "fengjie1"
 	person.age = 19

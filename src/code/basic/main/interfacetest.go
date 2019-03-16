@@ -16,7 +16,7 @@ func (queryImpl) queryById(name string) string {
 	return name + "继承了接口query"
 }
 
-func main() {
+func testInteface() {
 	//var qu  = queryImpl{}
 	var qu query = queryImpl{}
 	fmt.Println(qu.queryById("fengjie"))

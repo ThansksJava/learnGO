@@ -24,7 +24,7 @@ func (af black) Swap(i, j int) {
 	af[i] = af[j]
 	af[j] = temp
 }
-func main() {
+func testSort() {
 	var persons black
 	var i int
 	for i = 0; i < 10; i++ {

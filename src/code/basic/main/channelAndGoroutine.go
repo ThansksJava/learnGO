@@ -9,7 +9,7 @@ func sum(s []int, c chan int) {
 	}
 	c <- sum
 }
-func main() {
+func testChannelAndGoroutine() {
 	s := []int{7, 2, 8, -9, 4, 0}
 	c := make(chan int)
 	go sum(s[:len(s)/2], c)

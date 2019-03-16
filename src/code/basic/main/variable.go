@@ -8,7 +8,7 @@ var (
 	age1  int
 )
 
-func main() {
+func testVariable() {
 	////此种方式只能用于函数内部
 	//name := "fengjie"
 	//age := 18
