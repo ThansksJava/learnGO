@@ -14,9 +14,3 @@ type fly interface {
 func (p *Human) fly() {
 	fmt.Println(p.name + "可以飞")
 }
-func main() {
-	var person Human
-	person.name = "fengjie"
-	person.age = 18
-	person.fly()
-}
