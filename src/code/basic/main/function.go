@@ -21,7 +21,13 @@ func fibonacci(n int) int {
 	}
 	return fibonacci(n-2) + fibonacci(n-1)
 }
-
+func testDefer(x, y int) (z int) {
+	defer func() {
+		fmt.Println(z)
+	}()
+	z = x + y
+	return z + 200
+}
 func testFunction() {
 	var person person
 	person.name = "fengjie1"
@@ -32,4 +38,10 @@ func testFunction() {
 	for i := 0; i < 10; i++ {
 		fmt.Printf("%d\t", fibonacci(i))
 	}
+}
+func main_testDefer() {
+	//会输出两次
+	//203
+	//203
+	fmt.Println(testDefer(1, 2))
 }

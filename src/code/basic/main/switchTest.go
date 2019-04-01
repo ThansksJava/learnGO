@@ -12,6 +12,3 @@ func switchTest() {
 		println("c")
 	}
 }
-func main() {
-	switchTest()
-}
