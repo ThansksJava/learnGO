@@ -2,8 +2,11 @@ package main
 
 import "fmt"
 
-func helloworld() {
-	fmt.Println("hello world!")
-	var vari = "fengjie"
-	fmt.Println(vari)
+func main() {
+	var idx int
+	var val int
+	for i := 1; i <= 10; i++ {
+		idx, val = Fib(i)
+		fmt.Printf("序号: %d,值: %d", idx, val)
+	}
 }
