@@ -1,4 +1,4 @@
-package main
+package practice
 
 func Fib(n int) (idx int, val int) {
 	if n == 0 {

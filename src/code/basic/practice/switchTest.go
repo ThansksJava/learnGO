@@ -1,4 +1,4 @@
-package main
+package practice
 
 func switchTest() {
 	x := []int{1, 2, 3}
