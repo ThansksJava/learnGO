@@ -1,8 +1,9 @@
 package main
 
-import fmc "code/basic/function"
+// import fmc "code/basic/function"
 // import pac "code/basic/practice"
-import "fmt"
+import con "code/basic/container"
+
 func main() {
 	// fmc.CallParmaFunc(1, 2, fmc.ParamFunc)
 	// pac.SayH ello()
@@ -11,10 +12,11 @@ func main() {
 	// retf := fmc.Add();
 	// fmt.Printf("2b=%d",retf(2))
 
-	fib := fmc.Fib()
-	for i := 0;i < 10;i++{
-		fmt.Printf("%d ",fib())
-	}
-
+	// fib := fmc.Fib()
+	// for i := 0;i < 10;i++{
+	// 	fmt.Printf("%d ",fib())
+	// }
+	// con.ForArray()
+	con.Map()
 
 }
