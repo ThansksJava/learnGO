@@ -1,8 +1,11 @@
 package main
 
+import (
+	"code/basic/structp"
+)
+
 // import fmc "code/basic/function"
 // import pac "code/basic/practice"
-import con "code/basic/container"
 
 func main() {
 	// fmc.CallParmaFunc(1, 2, fmc.ParamFunc)
@@ -17,6 +20,8 @@ func main() {
 	// 	fmt.Printf("%d ",fib())
 	// }
 	// con.ForArray()
-	con.Map()
+	// con.Map()
+
+	structp.StructPrint()
 
 }
