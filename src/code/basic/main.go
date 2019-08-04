@@ -1,12 +1,10 @@
 package main
 
-import (
-	"code/basic/structp"
-)
+import "code/basic/method"
 
 // import fmc "code/basic/function"
 // import pac "code/basic/practice"
-
+//
 func main() {
 	// fmc.CallParmaFunc(1, 2, fmc.ParamFunc)
 	// pac.SayH ello()
@@ -22,6 +20,9 @@ func main() {
 	// con.ForArray()
 	// con.Map()
 
-	structp.StructPrint()
+	// structp.StructPrint()
+	// structp.StructTag()
+	// structp.StructAnonymousFields()
 
+	method.PracMeth()
 }
