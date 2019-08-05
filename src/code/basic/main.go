@@ -24,5 +24,6 @@ func main() {
 	// structp.StructTag()
 	// structp.StructAnonymousFields()
 
-	method.PracMeth()
+	// method.PracMeth()
+	method.TypeAssert()
 }
