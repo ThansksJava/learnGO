@@ -6,8 +6,8 @@ import (
 )
 
 type people struct { //Tag此处的警告是说成对出现比较好，但是还不是很明白怎么写 TODO
-	name string "这是name字段"
-	age  int    "这是age字段"
+	Name string `json:"这是name字段"`
+	Age  int    `json:"这是age字段"`
 }
 
 type apartment struct {
@@ -24,7 +24,7 @@ func StructPrint() {
 	// fengjie.age = 26
 	// fengjie.name = "fengjie"
 	fmt.Println("使用直接.赋值")
-	fmt.Print(fengjie.name, fengjie.age)
+	fmt.Print(fengjie.Name, fengjie.Age)
 	fmt.Println("使用&struct{1,2}赋值")
 	someone := &people{"someone", 16}
 	fmt.Println(someone)
@@ -56,8 +56,8 @@ func StructAnonymousFields() {
 	fmt.Println(apart)
 
 	fmt.Println(apart.name)
-	fmt.Println(apart.people.name)
+	fmt.Println(apart.people.Name)
 	// 外层结构体直接访问内部结构体的字段
-	fmt.Println(apart.age)
+	fmt.Println(apart.Age)
 
 }
