@@ -25,5 +25,6 @@ func main() {
 	// structp.StructAnonymousFields()
 
 	// method.PracMeth()
-	method.TypeAssert()
+	// method.TypeAssert()
+	method.SortTest()
 }
