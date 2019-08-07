@@ -1,6 +1,10 @@
 package main
 
-import "code/basic/method"
+import (
+	"code/basic/reflectp"
+)
+
+// import "code/basic/method"
 
 // import fmc "code/basic/function"
 // import pac "code/basic/practice"
@@ -26,5 +30,7 @@ func main() {
 
 	// method.PracMeth()
 	// method.TypeAssert()
-	method.SortTest()
+	// method.SortTest()
+
+	reflectp.ReflectTest()
 }
