@@ -1,14 +1,13 @@
 package main
 
-import (
-	"code/basic/reflectp"
-)
+// import "code/basic/reflectp"
 
 // import "code/basic/method"
 
 // import fmc "code/basic/function"
 // import pac "code/basic/practice"
-//
+import "code/basic/iop"
+
 func main() {
 	// fmc.CallParmaFunc(1, 2, fmc.ParamFunc)
 	// pac.SayH ello()
@@ -32,5 +31,9 @@ func main() {
 	// method.TypeAssert()
 	// method.SortTest()
 
-	reflectp.ReflectTest()
+	// reflectp.ReflectTest()
+	// iop.FileIn()
+	// iop.ReadAllCharsFromFileWriteToAnotherFile()
+	// iop.FileInWithBuf()
+	iop.FileInWithCol()
 }
