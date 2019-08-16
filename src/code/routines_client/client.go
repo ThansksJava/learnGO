@@ -13,10 +13,11 @@ func main() {
 		log.Fatal(err)
 	}
 	defer conn.Close()
-	mustCopy(os.Stdout, conn)
+	MustCopy(os.Stdout, conn)
 }
 
-func mustCopy(dst io.Writer, src net.Conn) {
+//MustCopy 从source流往destination流写入数据
+func MustCopy(dst io.Writer, src net.Conn) {
 	if _, err := io.Copy(dst, src); err != nil {
 		log.Fatal(err)
 	}
