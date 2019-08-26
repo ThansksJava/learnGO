@@ -1,4 +1,4 @@
-package routines_channal
+package singledirectionchannal
 
 import "fmt"
 
