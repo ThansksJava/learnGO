@@ -50,11 +50,11 @@ func main() {
 					n++
 					go func(link string) {
 						worklist <- crawLimit(link)
-						}(link)
-					}
+					}(link)
 				}
-				
 			}
-			depth++
+
+		}
+		depth++
 	}
 }
