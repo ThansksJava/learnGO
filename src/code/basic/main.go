@@ -4,9 +4,9 @@ package main
 
 // import "code/basic/method"
 
-// import fmc "code/basic/function"
+import fmc "code/basic/function"
 // import pac "code/basic/practice"
-import "code/basic/iop"
+// import "code/basic/iop"
 
 func main() {
 	// fmc.CallParmaFunc(1, 2, fmc.ParamFunc)
@@ -35,5 +35,7 @@ func main() {
 	// iop.FileIn()
 	// iop.ReadAllCharsFromFileWriteToAnotherFile()
 	// iop.FileInWithBuf()
-	iop.FileInWithCol()
+	// iop.FileInWithCol()
+	// pac.PanicTest()
+	fmc.BiBao1()
 }

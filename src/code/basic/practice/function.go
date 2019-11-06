@@ -11,7 +11,7 @@ func nort(person1 person) {
 	fmt.Println("这个函数没有返回值")
 }
 func rt(person1 person) (string, int) {
-	fmt.Println("这个函数有返回值")
+	fmt.Println("这个函数有返回值") 
 	return "冯杰", 18
 }
 
