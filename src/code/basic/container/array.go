@@ -45,7 +45,7 @@ func main() {
 	fmt.Println("slice1:", len(slice1), cap(slice1))
 
 	slice2 := []int{10, 20, 30, 40, 50}
-	newSlice2 := slice2[1:3]
+	newSlice2 := slice2[1:]
 	fmt.Println("before append slice2:", len(slice2), cap(slice2),slice2)
 
 	fmt.Println("befor append newSlice2:", len(newSlice2), cap(newSlice2),newSlice2)
