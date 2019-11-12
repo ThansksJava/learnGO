@@ -29,6 +29,13 @@ type TailObjMgr struct {
 //定义一个TailObjMgr对象
 var tailObjMgr *TailObjMgr
 
+//GetOneOnLine 拿到一行log
+func GetOneOnLine()(msg *TextMsg){
+	msg = <- tailObjMgr.msgChan
+	return
+}
+
+
 //InitTail 初始化tail组件
 func InitTail(conf []cm.CollectConf, chanSize int) (err error) {
 	if len(conf) == 0 {
@@ -70,7 +77,6 @@ func readFromTail(tailObj *TailObj) {
 			time.Sleep(100 * time.Millisecond)
 			continue
 		}
-		fmt.Println("msg", msg)
 		textMsg := &TextMsg{
 			Msg:   msg.Text,
 			Topic: tailObj.conf.Topic,

@@ -6,6 +6,8 @@ import (
 	"github.com/astaxie/beego/logs"
 
 	"logagent/tailf"
+
+	"time"
 )
 
 func main() {
@@ -31,5 +33,21 @@ func main() {
 		logs.Error("init tail failed,err:%v\n", err)
 		return
 	}
+	logs.Debug("initialize all success")
+
+	go func(){
+		var count int
+		for{
+			count++
+			logs.Debug("test for logger %d",count)
+			time.Sleep(time.Millisecond*1000)
+		}
+	}()
+	err = serverRun()
+	if err != nil{
+		logs.Error("serverRun failed,err:%v",err)
+		return
+	}
+	logs.Info("Program Exit!")
 
 }
