@@ -2,12 +2,11 @@ package main
 
 import (
 	"fmt"
+	"logagent/kafka"
 
 	"github.com/astaxie/beego/logs"
 
 	"logagent/tailf"
-
-	"time"
 )
 
 func main() {
@@ -34,18 +33,14 @@ func main() {
 		return
 	}
 	logs.Debug("initialize all success")
-
-	go func(){
-		var count int
-		for{
-			count++
-			logs.Debug("test for logger %d",count)
-			time.Sleep(time.Millisecond*1000)
-		}
-	}()
+	err = kafka.InitKafka(appConfig.kafkaAddr)
+	if err != nil {
+		logs.Error("init kafka failed,err:%v\n", err)
+		return
+	}
 	err = serverRun()
-	if err != nil{
-		logs.Error("serverRun failed,err:%v",err)
+	if err != nil {
+		logs.Error("serverRun failed,err:%v", err)
 		return
 	}
 	logs.Info("Program Exit!")
