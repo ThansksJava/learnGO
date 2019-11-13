@@ -2,10 +2,10 @@ package tailf
 
 import (
 	"fmt"
+	"github.com/astaxie/beego/logs"
+	"github.com/hpcloud/tail"
 	cm "logagent/commonconf"
 	"time"
-
-	"github.com/hpcloud/tail"
 )
 
 //TextMsg 定义消息结构体
@@ -30,11 +30,10 @@ type TailObjMgr struct {
 var tailObjMgr *TailObjMgr
 
 //GetOneOnLine 拿到一行log
-func GetOneOnLine()(msg *TextMsg){
-	msg = <- tailObjMgr.msgChan
+func GetOneOnLine() (msg *TextMsg) {
+	msg = <-tailObjMgr.msgChan
 	return
 }
-
 
 //InitTail 初始化tail组件
 func InitTail(conf []cm.CollectConf, chanSize int) (err error) {
@@ -73,7 +72,7 @@ func readFromTail(tailObj *TailObj) {
 	for {
 		msg, ok := <-tailObj.tail.Lines
 		if !ok {
-			fmt.Printf("tail file close reopen,filename:%s\n", tailObj.tail.Filename)
+			logs.Warn("tail file close reopen,filename:%s\n", tailObj.tail.Filename)
 			time.Sleep(100 * time.Millisecond)
 			continue
 		}

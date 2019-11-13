@@ -37,6 +37,6 @@ func SendToKafka(data, topic string) (err error) {
 		err = errSend
 		return
 	}
-	logs.Debug("pid:%v offset:%v\n", pid, offset)
+	logs.Debug("send success pid:%v offset:%v\n", pid, offset)
 	return
 }

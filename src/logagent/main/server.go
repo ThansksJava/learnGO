@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"github.com/astaxie/beego/logs"
 	"logagent/kafka"
 	"logagent/tailf"
@@ -20,6 +21,7 @@ func serverRun() (err error) {
 	return
 }
 func sendToKafka(msg *tailf.TextMsg) (err error) {
+	fmt.Println(msg.Msg)
 	err = kafka.SendToKafka(msg.Msg, msg.Topic)
 	return
 }
