@@ -30,13 +30,14 @@ func SendToKafka(data, topic string) (err error) {
 	msg := &sarama.ProducerMessage{}
 	msg.Topic = topic
 	msg.Value = sarama.StringEncoder(data)
-	pid, offset, errSend := client.SendMessage(msg)
+	//pid, offset, errSend := client.SendMessage(msg)
+	_, _, errSend := client.SendMessage(msg)
 	if errSend != nil {
 		fmt.Println("Send msg failed,", err)
 		logs.Error("Send msg failed,err :%v data:%v topic:%v", err, data, topic)
 		err = errSend
 		return
 	}
-	logs.Debug("send success pid:%v offset:%v\n", pid, offset)
+	//logs.Debug("send success pid:%v offset:%v\n", pid, offset)
 	return
 }
