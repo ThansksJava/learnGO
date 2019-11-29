@@ -1,0 +1,43 @@
+<div class="page-header">
+    <h1>
+        首页
+        <small>
+            <i class="ace-icon fa fa-angle-double-right"></i>
+            项目管理
+        </small>
+    </h1>
+</div><!-- /.page-header -->
+<div class="col-xs-12">
+    <!-- PAGE CONTENT BEGINS -->
+    <div class="row">
+        <div class="col-xs-12">
+            <table id="simple-table" class="table  table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th class="detail-col">项目ID</th>
+                    <th>项目名称</th>
+                    <th>项目类型</th>
+                    <th>
+                        <i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
+                        创建时间
+                    </th>
+                    <th>部署路径</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{range .applist}}
+                    <tr>
+                        <td>{{.AppId}}</td>
+                        <td>{{.AppName}}</td>
+                        <td>{{.AppType}}</td>
+                        <td class="hidden-480">{{.CreateTime}}</td>
+                        <td><span class="label label-success">{{.DevelopPath}}</span></td>
+
+                    </tr>
+                {{end}}
+
+                </tbody>
+            </table>
+        </div><!-- /.span -->
+    </div><!-- /.row -->
+</div>
