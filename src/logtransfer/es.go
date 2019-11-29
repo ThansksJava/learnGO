@@ -32,7 +32,7 @@ func sendToES(topic string, data []byte) (err error) {
 	msg := &LogMessage{}
 	msg.Topic = topic
 	msg.Message = string(data)
-
+	esClient.Delete()
 	_, err = esClient.Index().
 		Index(topic).
 		Type(topic).
