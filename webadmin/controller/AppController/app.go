@@ -2,11 +2,12 @@ package AppController
 
 import (
 	"fmt"
-	"github.com/astaxie/beego"
-	"github.com/astaxie/beego/logs"
+	"learnGO/webadmin/model"
 	"strings"
 	"time"
-	"webadmin/model"
+
+	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/logs"
 )
 
 type AppController struct {

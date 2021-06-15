@@ -2,7 +2,7 @@ package tailf
 
 import (
 	"fmt"
-	cm "logagent/commonconf"
+	cm "learnGO/logagent/commonconf"
 	"sync"
 	"time"
 

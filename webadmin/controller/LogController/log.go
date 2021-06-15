@@ -2,11 +2,12 @@ package LogController
 
 import (
 	"fmt"
+	"learnGO/webadmin/model"
+	"time"
+
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 	etcdclient "go.etcd.io/etcd/clientv3"
-	"time"
-	"webadmin/model"
 )
 
 var (

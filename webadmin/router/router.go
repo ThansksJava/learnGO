@@ -1,9 +1,10 @@
 package router
 
 import (
+	"learnGO/webadmin/controller/AppController"
+	"learnGO/webadmin/controller/LogController"
+
 	"github.com/astaxie/beego"
-	"webadmin/controller/AppController"
-	"webadmin/controller/LogController"
 )
 
 func init() {

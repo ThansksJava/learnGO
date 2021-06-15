@@ -2,14 +2,15 @@ package main
 
 import (
 	"fmt"
+	"learnGO/webadmin/model"
+	_ "learnGO/webadmin/router"
+	"time"
+
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
 	"go.etcd.io/etcd/clientv3"
-	"time"
-	"webadmin/model"
-	_ "webadmin/router"
 )
 
 func initDb() (err error) {
