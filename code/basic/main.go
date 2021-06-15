@@ -4,7 +4,8 @@ package main
 
 // import "code/basic/method"
 
-import fmc "code/basic/function"
+import fmc "learnGO/code/basic/function"
+
 // import pac "code/basic/practice"
 // import "code/basic/iop"
 

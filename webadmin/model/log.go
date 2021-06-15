@@ -3,11 +3,12 @@ package model
 import (
 	"encoding/json"
 	"errors"
+	cm "learnGO/logagent/commonconf"
+	"time"
+
 	"github.com/astaxie/beego/logs"
 	etcdclient "go.etcd.io/etcd/clientv3"
 	"golang.org/x/net/context"
-	cm "logagent/commonconf"
-	"time"
 )
 
 var (

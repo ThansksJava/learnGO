@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/astaxie/beego/logs"
-	"logagent/kafka"
-	"logagent/tailf"
+	"learnGO/logagent/kafka"
+	"learnGO/logagent/tailf"
 	"time"
+
+	"github.com/astaxie/beego/logs"
 )
 
 func serverRun() (err error) {

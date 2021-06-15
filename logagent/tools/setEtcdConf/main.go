@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"logagent/commonconf"
+	"learnGO/logagent/commonconf"
 	"time"
 
 	"go.etcd.io/etcd/clientv3"

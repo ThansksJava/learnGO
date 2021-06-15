@@ -4,8 +4,8 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	cm "logagent/commonconf"
-	"logagent/tailf"
+	cm "learnGO/logagent/commonconf"
+	"learnGO/logagent/tailf"
 	"strings"
 	"time"
 
@@ -92,12 +92,12 @@ func watchKey(key string) {
 		var getConfSucc = true
 		for wresp := range rch {
 			for _, ev := range wresp.Events {
-				if ev.Type == mvccpb.DELETE {
+				if mvccpb.Event_EventType(ev.Type) == mvccpb.DELETE {
 					logs.Warn("key[%s] 's config deleted", key)
 					continue
 				}
 
-				if ev.Type == mvccpb.PUT && string(ev.Kv.Key) == key {
+				if mvccpb.Event_EventType(ev.Type) == mvccpb.PUT && string(ev.Kv.Key) == key {
 					err = json.Unmarshal(ev.Kv.Value, &collectConf)
 					if err != nil {
 						logs.Error("key [%s], Unmarshal[%s], err:%v ", err)

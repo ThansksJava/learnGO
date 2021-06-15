@@ -4,6 +4,7 @@ go 1.16
 
 require (
 	github.com/Shopify/sarama v1.29.0
+	github.com/adonovan/gopl.io v0.0.0-20200323155855-65c318dde95e
 	github.com/astaxie/beego v1.12.3
 	github.com/coreos/etcd v3.3.25+incompatible // indirect
 	github.com/coreos/go-semver v0.3.0 // indirect
@@ -11,6 +12,7 @@ require (
 	github.com/coreos/pkg v0.0.0-20180928190104-399ea9e2e55f // indirect
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/google/uuid v1.2.0 // indirect
+	github.com/hpcloud/tail v1.0.0
 	github.com/jmoiron/sqlx v1.3.4
 	go.etcd.io/etcd v3.3.25+incompatible
 	go.uber.org/zap v1.17.0 // indirect

@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	"logagent/kafka"
+	"learnGO/logagent/kafka"
 
 	"github.com/astaxie/beego/logs"
 
-	"logagent/tailf"
+	"learnGO/logagent/tailf"
 )
 
 func main() {

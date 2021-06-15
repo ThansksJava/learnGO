@@ -6,7 +6,7 @@ import (
 
 	"github.com/astaxie/beego/config"
 
-	cm "logagent/commonconf"
+	cm "learnGO/logagent/commonconf"
 )
 
 var (
