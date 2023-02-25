@@ -16,7 +16,7 @@ require (
 	github.com/jmoiron/sqlx v1.3.4
 	go.etcd.io/etcd v3.3.25+incompatible
 	go.uber.org/zap v1.17.0 // indirect
-	golang.org/x/net v0.0.0-20210427231257-85d9c07bbe3a // indirect
+	golang.org/x/net v0.7.0
 	google.golang.org/grpc v1.38.0 // indirect
 	gopkg.in/olivere/elastic.v2 v2.0.61
 )
